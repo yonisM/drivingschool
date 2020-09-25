@@ -31,6 +31,10 @@
       <a class="navbar-brand" style = "color:black" href="#">Driving School</a>
     </div>
   </nav>
+    
+    
+
+    
 
   <!-- Masthead -->
   <header class="masthead text-white text-center">
@@ -42,7 +46,7 @@
         </div>
         </div>
         
-        
+
           <form method="post">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name = "postcode" placeholder="Enter your postcode" required>
@@ -52,7 +56,13 @@
             </div>
         </form>
         
-        <span style="color:white"> {{ evaluate_postcode}}  </span>
+        
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" style = "display: {{show_hide}}">
+  <strong>{{ evaluate_postcode}} some text</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
           
         
         

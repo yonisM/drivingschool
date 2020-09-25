@@ -30,9 +30,9 @@ def postcode_checker(postcode):
 
            
             
-            with open(filename, 'a', newline='') as write_obj:
+            '''with open(filename, 'a', newline='') as write_obj:
                 csv_writer = writer(write_obj)
-                csv_writer.writerow(postcode_entered.split(','))
+                csv_writer.writerow(postcode_entered.split(','))'''
             
             return serve_area
             continue
@@ -42,9 +42,9 @@ def postcode_checker(postcode):
             serve_area = 'Yes'
             postcode_entered = str(timestamp) + ",Postcode served = Yes," + "Postcode entered = " + postcode
             
-            with open(filename, 'a', newline='') as write_obj:
+            '''with open(filename, 'a', newline='') as write_obj:
                 csv_writer = writer(write_obj)
-                csv_writer.writerow(postcode_entered.split(','))
+                csv_writer.writerow(postcode_entered.split(','))'''
             
             return serve_area
             

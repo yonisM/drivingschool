@@ -15,6 +15,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 #Routes to the index
 @app.route("/", methods=['GET','POST'])
 def index():
+    show_hide = 'none'
     
     if request.method == 'POST':
         postcode = request.form['postcode']
@@ -22,11 +23,12 @@ def index():
         if evaluate_postcode == 'Yes':
             return render_template('booking.html')
         else:
-            return render_template('index.html', evaluate_postcode = evaluate_postcode)
+            show_hide = 'block'
+            return render_template('index.html', evaluate_postcode = evaluate_postcode, show_hide = show_hide)
 
-        return render_template('index.html', evaluate_postcode = evaluate_postcode)
+        return render_template('index.html', evaluate_postcode = evaluate_postcode, show_hide = show_hide)
     else:
-        return render_template('index.html')
+        return render_template('index.html', show_hide = show_hide)
 
 
 
