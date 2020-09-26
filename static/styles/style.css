@@ -46,6 +46,11 @@ li > a {
   width: 15rem;
 }
 
+.modal-backdrop.show {
+   background-color: black;
+    opacity: 1
+}
+
 #page-content-wrapper {
   min-width: 100vw;
 }
