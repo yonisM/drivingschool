@@ -25,9 +25,25 @@ def index():
             return render_template('booking.html')
     else:
         return render_template('index.html', show_hide = show_hide)
+    
+    
+    
+    
+
+#Route to the login page
+@app.route("/login", methods=['GET','POST'])
+def login():
+    return render_template('login.html')
 
 
 
+
+
+
+#Routes to the sign up page
+@app.route("/signup", methods=['GET','POST'])
+def signup():
+    return render_template('signup.html')
 
 
 if __name__== '__main__':
